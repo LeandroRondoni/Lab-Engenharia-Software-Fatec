@@ -1,0 +1,26 @@
+<script>
+    
+    let x = prompt("Digite um número inteiro positivo: ", "");    
+    x = +x;    
+    while (x <= 0){
+        alert("Valor inválido. Tente Novamente.")
+        x = prompt("Digite um número inteiro positivo: ", "");
+        x = +x;
+    }
+    
+    function isPrimo(num){
+    if (num <= 1) {
+        return alert("O número não é primo.");
+    }
+    
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return alert("O número não é primo.");
+        }            
+    }       
+    return alert("O número é primo.");
+    }    
+
+    isPrimo(x);       
+
+</script>

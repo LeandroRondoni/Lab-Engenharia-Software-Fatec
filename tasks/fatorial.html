@@ -1,0 +1,25 @@
+<script>
+        let x = prompt("Digite um número inteiro positivo: ", "");
+        x = +x;
+        while (x <= 0) {
+            alert("Valor inválido. Tente Novamente.")
+            x = prompt("Digite um número inteiro positivo: ", "");
+            x = +x;
+        }
+
+        function fatorial(num) {
+            // factorial of 0 is 1
+            if (num === 0) {
+                return 1;
+            }
+
+            let result = 1;
+            for (let i = num; i > 1; i--) {
+                result *= i;
+            }
+
+            return result;
+        }
+        
+        alert("O fatorial de "+ x + " é "+ fatorial(x));
+</script>

@@ -1,0 +1,17 @@
+<script>   
+
+        let x;
+        x = prompt("Digite um valor: ", "");
+        if (!isNaN(x)) {
+            x = parseInt(x);
+        } else if (x == "true" || x == "false") {
+            x = true;
+        }
+
+        if (confirm("Deseja verificar o tipo do arquivo? ")) {
+            document.write("<div class='container'>" + typeof x + "</div>");
+        } else {
+            document.write("Obrigado por visitar esta página");
+        }
+
+</script>
