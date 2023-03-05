@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora atualizando...</title>
+</head>
+<body>
+    <h2>Veja a Hora Certa Aqui</h2>
+    <h1 id="hora"></h1>
+        
+    <script type="text/javascript">
+        
+        
+        setInterval(horaAgora, 1000);
+        
+        function horaAgora(){
+            let data = new Date();
+            let hora = data.getHours();
+            let minutos = data.getMinutes();
+            let segundos = data.getSeconds();
+            document.getElementById("hora").innerHTML = hora+":"+minutos+":"+segundos;            
+            
+        }  
+    </script>
+</body>
+</html>

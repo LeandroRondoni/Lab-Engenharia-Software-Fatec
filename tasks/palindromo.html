@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromo</title>    
+</head>
+<body>
+    <h3>Escreva uma palavra ou frase para verificar se é um Palíndromo:</h3>
+    <input type="text" id="texto">
+    <button id="meuBt">Verificar</button>
+    <script type="text/javascript">
+        document.getElementById("meuBt").addEventListener("click", Palin)
+
+        function Palin() {
+            let texto = document.getElementById("texto").value;
+            texto = texto.toUpperCase()
+            let inverso = [...texto].reverse().join("")            
+            
+            if (texto == inverso) {
+                alert(texto + " é um palíndromo.")
+            }
+            else
+                alert(texto  + " não é um palíndromo.")
+        };
+
+    </script>
+</body>
+</html>
