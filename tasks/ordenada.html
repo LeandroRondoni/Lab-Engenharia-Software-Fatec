@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7 de março de 2023</title>
+</head>
+
+<body>
+
+    <form>
+        <label for="valor">Escreva o item que deseja incluir na lista: </label>
+        <br>
+        <input type="text" id="valor">
+        <input type="submit" value="Adicionar">
+
+    </form>
+
+    <ol id="ordenada">
+
+    </ol>
+
+
+    <script>
+        let lista = []
+
+        addEventListener("submit", function adicionar() {
+            event.preventDefault()
+            let x = document.getElementById("valor").value
+            lista.push(x)
+            lista.sort()
+            emOrdem()
+
+        }
+        )
+
+
+
+        function emOrdem() {
+            lista_ordenada = document.getElementById("ordenada")
+            document.getElementById("valor").value = ""
+            lista_ordenada.innerHTML = ""
+            for (let i = 0; i < lista.length; i++) {
+
+                let a = document.createElement("LI")
+                let b = document.createTextNode(lista[i])
+                a.appendChild(b)
+                lista_ordenada.appendChild(a)
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

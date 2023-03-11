@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Carro</title>
+</head>
+<body>
+    <form>
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca"><br>
+    
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo"><br>
+    
+        <label for="ano">Ano:</label>
+        <input type="number" id="ano" name="ano"><br>
+    
+        <label for="cor">Cor:</label>
+        <input type="text" id="cor" name="cor"><br>
+    
+        <label for="km">Quilometragem:</label>
+        <input type="number" id="km" name="km"><br>
+    
+        <label for="valor_fipe">Valor FIPE:</label>
+        <input type="number" id="valor_fipe" name="valor_fipe"><br>
+    
+        <input type="submit" value="Calcular">
+    </form>
+
+    <script>
+        addEventListener("submit", function anosUtilizacao(){
+            event.preventDefault()
+            let marca = document.getElementById("marca").value
+            let modelo = document.getElementById("modelo").value
+            let ano = document.getElementById("ano").value
+            let cor = document.getElementById("cor").value
+            let km = document.getElementById("km").value
+            let fipe = document.getElementById("valor_fipe").value
+            const c1 = new createCar(marca, modelo, ano, cor, km, fipe)            
+            let r = document.createElement("P")
+            let t = document.createTextNode("O veículo está " + c1.anosUtilizacao() + " anos em uso.")
+            r.appendChild(t)
+            document.body.appendChild(r)
+
+            let x = document.createElement("P")
+            let mercado = document.createTextNode("O veículo vale R$ " + c1.valorMercado() + " .")
+            x.appendChild(mercado)
+            document.body.appendChild(x)
+        })
+        
+        
+        function createCar(marca, modelo, ano, cor, km, valor_fipe) {
+                return {
+                    _marca: marca,
+                    _modelo: modelo,
+                    _ano: ano,
+                    _cor: cor,
+                    _km: km,
+                    _valor_fipe: valor_fipe,
+
+                    get marca() {
+                        return this._marca;
+                    },
+
+                    set marca(newMarca) {
+                        this._marca = newMarca;
+                    },
+
+                    get modelo() {
+                        return this._modelo;
+                    },
+
+                    set modelo(newModelo) {
+                        this._modelo = newModelo;
+                    },
+
+                    get ano() {
+                        return this._ano;
+                    },
+
+                    set ano(newAno) {
+                        this._ano = newAno;
+                    },
+
+                    get cor() {
+                        return this._cor;
+                    },
+
+                    set cor(newCor) {
+                        this._cor = newCor;
+                    },
+
+                    get km() {
+                        return this._km;
+                    },
+
+                    set km(newKm) {
+                        this._km = newKm;
+                    },
+
+                    get valor_fipe() {
+                        return this._valor_fipe;
+                    },
+
+                    set valor_fipe(newValorFipe) {
+                        this._valor_fipe = newValorFipe;
+                    },
+                    
+                    anosUtilizacao(){
+                        let data = new Date()
+                        let anoAtual = data.getFullYear()                         
+                        return anoAtual - this._ano
+                    },
+                    
+                    valorMercado() {
+                        if (this._km < 30000){
+                            return this._valor_fipe * 1.10
+                        }
+                        else if (this._km >= 30000 && this._km < 50000){
+                            return this._valor_fipe * 1
+                        }
+                        else{
+                            return this._valor_fipe * 0.9
+                        }
+                    }
+                }
+            }
+
+
+    </script>
+
+</body>
+</html>
