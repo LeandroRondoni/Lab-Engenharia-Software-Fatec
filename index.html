@@ -13,6 +13,10 @@
     <title>Laboratório de Engenharia de Software</title>
 </head>
 <body>
+    <script src="tasks\carros.js">
+ 
+    </script>
+
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Laboratório de Engenharia de Software</a>
@@ -23,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -52,14 +56,30 @@
                             Aula 3
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="tasks\ordenada.html">Atividade 1: Lista Ordenada</a></li>
-                            <li><a class="dropdown-item" href="tasks\carro.html">Atividade 2: Cálculo Carro</a></li>                            
+                            <li><a class="dropdown-item" href="tasks\ordenada.html">Atividade 1: Lista Ordenada</a></li>                                                        
+                            <li>
+                                <a id="criarForm" class="dropdown-item" href="#" onclick="createCarForm()">Atividade 2: Cálculo Carro</a>
+                            </li>                            
                         </ul>
                     </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Aula 4
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a id="formescola" class="dropdown-item" href="#">Atividade 1: Formulário de Cadastro</a></li>
+                                                <li>
+                                                    <a id="todolist" class="dropdown-item" href="#">Atividade 2: To Do List</a>
+                                                </li>
+                                            </ul>
+                                        </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <script src="tasks\todolist.js"></script>
+    <script src="tasks\formescola.js"></script>
 
 </body>
 </html>
