@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letreiro</title>
+    <!-- Usando React Online -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Usando Babel Online -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id='root'></div>
+    <script type='text/babel'>
+        function letreiro(){                   
+            const element = (<h1>{letra()}</h1>)        
+        
+            ReactDOM.render(element, document.getElementById('root'))
+        }    
+    
+        let i = 0        
+        
+        function letra(){   
+            let frase = 'Venha estudar na FATEC'         
+            frase = frase.slice(0, i)            
+            i++
+            return frase
+            if(i <= frase.lenght)
+                setTimeout(letra(), 500)
+        }
+    
+    setInterval(letreiro, 500)
+    </script>    
+</body>
+</html>
