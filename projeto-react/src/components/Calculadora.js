@@ -46,7 +46,7 @@ export default function Calculadora() {
     } else if (operacao === 'inv') {
       return secondOperand * (-1)
     } else if (operacao === 'percent') {
-      return (firstOp + secondOperand) / 100
+      return firstOp * (secondOperand / 100)
     }
 
     return secondOperand

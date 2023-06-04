@@ -8,7 +8,7 @@ import Atv04 from "./Atv04"
 import Layout from "./Layout";
 import Atv05 from "./Atv05"
 import Atv06 from "./Atv06"
-// import Atv07 from "./Atv07"
+import Atv07 from "./Atv07"
 // import Atv08 from "./Atv08"
 
 export default function MyRoutes(){
@@ -23,8 +23,7 @@ export default function MyRoutes(){
                 <Route path="/Atv04" element={<Atv04/>} />
                 <Route path="/Atv05" element={<Atv05/>} />
                 <Route path="/Atv06" element={<Atv06/>} />
-                {/* <Route path="/Atv07" element={<Atv07/>} />
-                <Route path="/Atv08" element={<Atv08/>} /> */}
+                <Route path="/Atv07" element={<Atv07/>} />                
             </Route>
         </Routes>
         </BrowserRouter>

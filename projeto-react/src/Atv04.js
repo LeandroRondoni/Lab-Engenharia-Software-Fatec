@@ -11,6 +11,7 @@ import Counter from "./components/Counter";
 import Form from "./components/Form";
 import Form2 from "./components/Form2";
 import Form3 from "./components/Form3";
+import MovingDot from "./components/MovingDot"
 
 
 export default function Atv04(){
@@ -24,6 +25,8 @@ export default function Atv04(){
                 <Counter/>
                 <br />
                 <Form/>
+                <br />
+                <MovingDot />
                 <br />
                 <Form2/>
                 <br />
@@ -41,9 +44,6 @@ export default function Atv04(){
                 <br />
                 <List4/>
                 <BucketList/>
-                {/*                 MovingDot
-                Form2
-                Form3 */}
             <br/>
         </div>
     )
